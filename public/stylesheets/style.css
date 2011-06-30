@@ -1,0 +1,324 @@
+@import "reset.css";
+@import "uniform.poll.css";
+
+body {
+	background-color: #dcdcdc;
+	color: #525252;
+	font: normal 14px Helvetica, Arial;
+	padding-top: 40px;
+	padding-bottom: 100px;
+}
+
+
+
+
+a {
+	color: #525252;
+	border-color: #c4be37;
+}
+
+#wrapper {
+	margin: 0 auto;
+	width: 647px;
+	padding-top: 25px;
+	background: url(../images/top.png) no-repeat;
+}
+
+#shadow {
+	float: left;
+	width: 100%;
+	background: url(../images/middle.png) repeat-y;
+}
+
+	#question {
+		float: left;
+		width: 614px;
+		padding-left: 28px;
+	}
+
+		#question p {
+			float: left;
+			width: 540px;
+			padding-top: 35px;
+			padding-left: 25px;
+			padding-right: 25px;
+			padding-bottom: 35px;
+			background-color: #3d89b9;
+			color: #fff;
+		}
+		
+		#question em {
+			color: #fff;
+			font: bold 4em Helvetica, Arial;
+			font-style: normal;
+		}
+		
+		#question span {
+			position: relative;
+			font-size: 4em;
+			font-weight: bold;
+			line-height: 70px;
+			color: #8cb9d6;
+		}
+		
+		#question .questionbox {
+			float: left;
+			width: 500px;
+			padding-right: 40px;
+			background: #3d89b9 url(../images/question.gif) no-repeat right bottom;
+			color: #fff;
+			font: bold 4em Helvetica, Arial;
+			border: 0;
+			overflow: hidden;
+		}
+	
+	#options {
+		float: left;
+		width: 614px;
+		padding-left: 28px;
+	}
+	
+		#options .voting {
+			float: left;
+			width: 578px;
+			padding: 6px;
+			padding-bottom: 0;
+			background-color: #fff;
+		}
+		
+			#options .voting ul {
+				float: left;
+				width: 536px;
+				padding: 20px;
+				border: 1px solid #dcdcdc;
+				border-bottom: 0;
+			}
+			
+			#options .voting ul li {
+				float: left;
+				width: 536px;
+				color: #8e8e8e;
+				font-size: 2.8em;
+				line-height: 50px;
+				font-weight: bold;
+			}
+			
+				#options .voting ul li em {
+					float: left;
+					padding-left: 15px;
+					padding-top: 15px;					
+					width: 50px;
+				}
+	
+		#options p {
+			float: left;
+			width: 578px;
+			padding: 6px;
+			padding-bottom: 0;
+			background-color: #fff;
+		}
+		
+		#options .buttons {
+			float: left;
+			background-color: #fff;
+			width: 578px;
+			padding-left: 6px;
+			padding-right: 6px;
+			padding-bottom: 6px;
+		}
+		
+		#options .buttons p {
+			float: left;
+			text-align: right;
+			width: 564px;
+			border: 1px solid #dcdcdc;
+			border-top: 0;
+			padding-bottom: 6px;
+			font-size: 0.9em;
+			font-weight: bold;
+			line-height: 29px;
+		}
+		
+			#options .buttons p input[type=submit] {
+				float: right;
+				margin-top: 3px;
+			}
+			
+			#options .buttons p em {
+				float: right;
+				padding-right: 15px;
+				font-style: normal;
+			}
+			
+				#options .buttons p em strong {
+					float: left;
+					padding-top: 5px;
+				}
+		
+		#options .optionbox {
+			float: left;
+			width: 556px;
+			height: 120px;
+			padding: 10px;
+			border: 1px solid #dcdcdc;
+			border-bottom: 0;
+			background: url(../images/type.gif) no-repeat center center;
+			font: bold 3em Helvetica, Arial;
+			overflow: hidden;
+			color: #8e8e8e;
+		}
+		
+	#results {
+		float: left;
+		width: 614px;
+		padding-left: 28px;
+	}
+
+		#results .voting {
+			float: left;
+			width: 578px;
+			padding: 6px;
+			padding-bottom: 0;
+			background-color: #fff;
+		}
+		
+			#results .reswrap {
+				float: left;
+				width: 558px;
+				border: 1px solid #dcdcdc;
+				border-bottom: 0;
+				padding: 18px;
+				padding-right: 0;
+			}
+
+			#results .voting ul {
+				float: left;
+				width: 196px;
+				padding: 0;
+				border-bottom: 1px solid #dcdcdc;
+			}
+
+			#results .voting .graph {
+				float: left;
+				width: 362px;
+				overflow: hidden;
+			}
+
+			#results .voting ul li {
+				float: left;
+				width: 100%;
+				color: #8e8e8e;
+				line-height: 20px;
+				font-weight: bold;
+				border-top: 1px solid #dcdcdc;
+				padding-top: 4px;
+				padding-bottom: 4px;
+			}
+
+				#results .voting ul li p {
+					float: left;
+					width: 100%;
+					font-size: 22px;
+					padding: 0;
+				}
+				
+				#results .voting ul li p span {
+					float: left;
+					width: 30px;
+					padding: 0;
+					color: #c6c037;
+				}
+				
+				#results .voting ul li .stats {				
+					font-size: 12px;
+					font-weight: normal;
+					line-height: 18px;
+				}
+				
+				#results .voting ul li .bar {
+					float: left;
+					width: 100%;
+					height: 9px;
+				}
+					
+					#results .voting ul li .bar em {
+						float: left;
+						height: 9px;
+						background-color: #c2c824;
+					}
+				
+		#results p {
+			float: left;
+			width: 578px;
+			padding: 6px;
+			padding-bottom: 0;
+		}
+
+		#results .buttons {
+			float: left;
+			background-color: #fff;
+			width: 578px;
+			padding-left: 6px;
+			padding-right: 6px;
+			padding-bottom: 6px;
+		}
+
+		#results .buttons p {
+			float: left;
+			text-align: right;
+			width: 564px;
+			border: 1px solid #dcdcdc;
+			border-top: 0;
+			padding-bottom: 6px;
+			font-size: 0.9em;
+			font-weight: bold;
+			line-height: 29px;
+		}
+
+			#results .buttons p input[type=submit] {
+				float: right;
+				margin-top: 3px;
+			}
+
+			#results .buttons p span {
+				float: right;
+				padding-right: 10px;
+			}
+
+		#results .optionbox {
+			float: left;
+			width: 556px;
+			height: 120px;
+			padding: 10px;
+			border: 1px solid #dcdcdc;
+			border-bottom: 0;
+			background: url(../images/type.gif) no-repeat center center;
+			color: #515151;
+			font: normal 1em Helvetica, Arial;
+			overflow: hidden;
+		}
+	
+	#footer {
+		float: left;
+		font-size: 0.85em;
+		width: 614px;
+		padding-left: 28px;
+		padding-top: 14px;
+		height: 50px;
+		background: url(../images/bottom.png) no-repeat;
+	}
+	
+		#footer .strong {
+			font-weight: bold;
+		}
+	
+		#footer .left {
+			float: left;
+			width: 295px;
+		}
+		
+		#footer .right {
+			float: left;
+			width: 295px;
+			text-align: right;
+		}
