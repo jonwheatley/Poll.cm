@@ -12,8 +12,6 @@ class ResultsController < ApplicationController
     
       @av = 100/@total
     
-
-    
       @optionsgraph = ""
       @votesgraph = ""
     
