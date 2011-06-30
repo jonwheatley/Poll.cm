@@ -23,14 +23,13 @@
 					<p>
 					
 					
-					<input type="submit" value="vote"><em><a href="http://poll.cm/1" title=""> <?php echo $totalvotes; ?> votes so far</a></em></p>
+					<input type="submit" value="vote"><em><a href="http://poll.cm/1" title=""> <%= @question.votes.count %> votes so far</a></em></p>
 				</div>
 				<% end %>
 			</div>
 		</div>
 		<div id="footer">
-			<p class="left strong"><a href="http://poll.cm" title="Make your own poll">Make your own poll!</a></p>
-<p class="right">12 questions | 32546 votes | <strong>poll.cm &copy;</strong></p>
+			<%= render :partial => 'layouts/footer' %>
 		</div>
 	</div>
 </div>
