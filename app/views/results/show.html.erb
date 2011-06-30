@@ -12,13 +12,12 @@
 			<ul>
 				
 				<% @question.options.each do |option| %>
-				<li><p><%= option.option %></p><p class="stats"><%= option.votes.count %> votes | <%= @av*option.votes.count %>%</p><p class="bar"><em style="width: 50%"></em></p></li>
+				<li><p><%= option.option %></p><p class="stats"><%= option.votes.count %> votes | <%= @av*option.votes.count %>%</p><p class="bar"><em style="width: <%= @av*option.votes.count %>%"></em></p></li>
 				<% end %>
 				
 			</ul>
 			
-			<div class="graph"><img src="http://chart.apis.google.com/chart?chs=370x225&cht=p&chco=C3C523&chd=t:3,1,0&chl=hi|hi|HI" /></div>
-			
+			<div class="graph"><img src="http://chart.apis.google.com/chart?chs=370x225&cht=p&chco=C3C523&chd=t:<%= @votesgraph %>&chl=<%= @optionsgraph %>" /></div>
 		</div>
 	</div>
 <div class="buttons">
