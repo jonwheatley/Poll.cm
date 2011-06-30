@@ -5,19 +5,27 @@ class ResultsController < ApplicationController
     @options = Option.where(:question_id => params[:id])
     
     @total = Vote.where(:question_id => params[:id]).count
-    @av = 100/@total
     
-    @optionsgraph = ""
-    @votesgraph = ""
+    if @total == 0
+      redirect_to options_path(@question)
+    else
     
-    @options.each do |option|
-      @optionsgraph = "#{@optionsgraph}|#{option.option[0..10]}..."
-      @votesgraph = "#{@votesgraph},#{option.votes.count}"
+      @av = 100/@total
+    
+
+    
+      @optionsgraph = ""
+      @votesgraph = ""
+    
+      @options.each do |option|
+        @optionsgraph = "#{@optionsgraph}|#{option.option[0..10]}..."
+        @votesgraph = "#{@votesgraph},#{option.votes.count}"
+      end
+    
+      @optionsgraph = @optionsgraph[1..-1]
+      @votesgraph = @votesgraph[1..-1]
+    
     end
-    
-    @optionsgraph = @optionsgraph[1..-1]
-    @votesgraph = @votesgraph[1..-1]
-    
   end
   
 end
