@@ -1,6 +1,9 @@
 Pollcm::Application.routes.draw do
   
   resources :index
+  resources :options
+  resources :results
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
