@@ -1,0 +1,41 @@
+	<div id="wrapper">
+		<div id="shadow">
+
+
+		
+<div id="question">
+<p><em><%= @question.question %></em><span>?</span></p>
+</div>
+<div id="results">
+	<div class="voting">
+		<div class="reswrap">
+			<ul>
+				
+				<% @question.options.each do |option| %>
+				<li><p><%= option.option %></p><p class="stats"><%= option.votes.count %> votes | <%= @av*option.votes.count %>%</p><p class="bar"><em style="width: 50%"></em></p></li>
+				<% end %>
+				
+			</ul>
+			
+			<div class="graph"><img src="http://chart.apis.google.com/chart?chs=370x225&cht=p&chco=C3C523&chd=t:3,1,0&chl=hi|hi|HI" /></div>
+			
+		</div>
+	</div>
+<div class="buttons">
+
+<p><span>Results appear in real time | <a href=\"http://poll.cm/$pollid\" title=\"\"><%= @total %> votes so far</a></span></p>
+
+</div>
+</div>
+
+
+			
+
+
+		</div>
+		<div id="footer">
+			<p class="left strong"><a href="http://poll.cm" title="Make your own poll">Make your own poll!</a></p>
+<p class="right">12 questions | 32546 votes | <strong>poll.cm &copy;</strong></p>
+		</div>
+	</div>
+</div>

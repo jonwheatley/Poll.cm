@@ -4,16 +4,18 @@
 			<div id="question">
 				<p>
 					<em>
-						this is the question					</em><span>?</span>
+						<%= @question.question %>
+					</em><span>?</span>
 				</p>
 			</div>
 			<div id="options">
-				<form name="options" action="lol" method="POST">
+				<%= form_tag(votes_path, :method => "post") do %>
 				<div class="voting">
 					<ul>
 					
-						<li><em><input type="radio" name="vote" value="$"></em>  $option </li>
-						
+						<% @options.each do |option| %>
+						<li><em><input type="radio" name="vote" value="<%= option.id %>"></em>  <%= option.option %> </li>
+						<% end %>
 					
 					</ul>
 				</div>
@@ -23,7 +25,7 @@
 					
 					<input type="submit" value="vote"><em><a href="http://poll.cm/1" title=""> <?php echo $totalvotes; ?> votes so far</a></em></p>
 				</div>
-				</form>
+				<% end %>
 			</div>
 		</div>
 		<div id="footer">

@@ -4,6 +4,15 @@ Pollcm::Application.routes.draw do
   resources :options
   resources :results
   
+  
+  
+  match ':id', :to => 'options#show', :as => 'options'
+  
+  match ':id/vote' => 'votes#create', :method => :post, :as => 'votes'
+  
+  match ':id/r' => 'results#show', :method => :get, :as => 'results'
+  
+  root :to => "index#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

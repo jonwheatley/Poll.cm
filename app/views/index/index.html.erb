@@ -1,7 +1,7 @@
 
 <div class="center">
 	<div id="wrapper">
-		<form method="post" action="index.php">
+		<% form_for :question, @question do |form| %>
 		<div id="shadow">
 			<div id="question">
 				<p><textarea name="question" class="questionbox" onfocus="if(this.value = this.defaultValue){this.value=''}" onblur="if(this.value==''){ this.value=this.defaultValue }">Just type your question here, ok</textarea></p>
@@ -13,7 +13,7 @@
 				</div>
 			</div>
 		</div>
-		</form>
+		<% end %>
 		<div id="footer">
 			<p class="left strong"><a href="http://poll.cm" title="Make your own poll">Make your own poll!</a></p>
 <p class="right">12 questions | 32546 votes | <strong>poll.cm &copy;</strong></p>
