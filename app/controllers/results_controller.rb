@@ -1,6 +1,6 @@
 class ResultsController < ApplicationController
   
-  def show
+  def index
     @question = Question.find(params[:id])
     @options = Option.where(:question_id => params[:id])
     

@@ -10,7 +10,7 @@ Pollcm::Application.routes.draw do
   
   match ':id/vote' => 'votes#create', :method => :post, :as => 'votes'
   
-  match ':id/r' => 'results#show', :method => :get, :as => 'results'
+  match ':id/r' => 'results#index', :method => :get, :as => 'results'
   
   root :to => "index#index"
   # The priority is based upon order of creation:
