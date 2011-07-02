@@ -2,6 +2,7 @@ class ResultsController < ApplicationController
   
   def index
     @question = Question.find(params[:id])
+    
     @options = Option.where(:question_id => params[:id])
     
     @total = Vote.where(:question_id => params[:id]).count

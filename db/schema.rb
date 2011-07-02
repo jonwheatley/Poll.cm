@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110630041856) do
+ActiveRecord::Schema.define(:version => 20110702005410) do
 
   create_table "options", :force => true do |t|
     t.string   "option"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20110630041856) do
     t.string   "question"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "views"
   end
 
   create_table "votes", :force => true do |t|

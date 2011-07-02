@@ -1,3 +1,13 @@
+<% #add to view counter
+if @question.views.nil?
+  @question.views = 1
+  @question.save
+else
+  @question.views = @question.views + 1
+  @question.save
+end 
+%>
+
 <div class="center">
 	<div id="wrapper">
 		<div id="shadow">
