@@ -6,7 +6,17 @@ class IndexController < ApplicationController
   
   def create 
     @question = Question.new
-    @question.question = params[:question]
+    
+    # if there's a ? at the end, get rid of it. 
+    last = params[:question][-1, 1]
+    if last == "?"
+      length = params[:question].length
+      newlength = length -1
+      @question.question = params[:question][0,newlength]
+    else
+      @question.question = params[:question]
+    end
+    
     @question.save
     
     
