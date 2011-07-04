@@ -22,6 +22,14 @@ class StatsController < ApplicationController
     @averagevotes = (@totalvotes.to_f/@totalquestions.to_f)
     @averageoptions = (@totaloptions.to_f/@totalquestions.to_f)
     
+    # users online
+    
+    require 'open-uri'
+    require 'json'
+    
+    result = JSON.parse(open('http://api.chartbeat.com/quickstats?host=poll.cm&apikey=c0c8b1c9686c75ab506a765fef1d1022').read)
+    @onlinenow = result['people']
+    
   end
   
 end
