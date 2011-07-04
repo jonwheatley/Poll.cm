@@ -153,7 +153,7 @@ data.setValue(29, 1, <%= @days[0] %>);
 
 <div id="stats">	
 	<div id="total">
-		To date there have been a total of <span><%= @totalquestions %></span> questions and <span><%= @totalvotes %></span> votes. Each question has an average of <span><%= sprintf( "%.02f" , @averagevotes ) %></span> votes and roughly <span>3</span> options. Oh, and right now there's <span>4</span> users online. 
+		To date there have been a total of <span><%= @totalquestions %></span> questions and <span><%= @totalvotes %></span> votes. Each question has an average of <span><%= sprintf("%.02f" ,@averagevotes ) %></span> votes and roughly <span><%= sprintf("%.02f", @averageoptions) %></span> options. Oh, and right now there's <span>4</span> users online. 
 	</div>
 	<div id="graphs">
 		<div id="votes"></div>

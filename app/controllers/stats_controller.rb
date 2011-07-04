@@ -17,8 +17,10 @@ class StatsController < ApplicationController
     
     @totalquestions = Question.all.count
     @totalvotes = Vote.all.count
+    @totaloptions = Option.all.count
     
     @averagevotes = (@totalvotes.to_f/@totalquestions.to_f)
+    @averageoptions = (@totaloptions.to_f/@totalquestions.to_f)
     
   end
   
