@@ -3,6 +3,7 @@ Pollcm::Application.routes.draw do
   resources :index
   resources :options
   resources :results
+  resources :stats
   
   
   

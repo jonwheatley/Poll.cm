@@ -1,0 +1,38 @@
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Day');
+        data.addColumn('number', 'Votes');
+        data.addRows(8);
+        data.setValue(0, 0, '1');
+        data.setValue(0, 1, 23);
+        data.setValue(1, 0, '2');
+        data.setValue(1, 1, 35);
+        data.setValue(2, 0, '3');
+        data.setValue(2, 1, 46);
+        data.setValue(3, 0, '4');
+        data.setValue(3, 1, 67);
+        data.setValue(4, 0, '5');
+        data.setValue(4, 1, 23);
+        data.setValue(5, 0, '6');
+        data.setValue(5, 1, 35);
+        data.setValue(6, 0, '7');
+        data.setValue(6, 1, 46);
+        data.setValue(7, 0, '8');
+        data.setValue(7, 1, 67);
+
+        var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+        chart.draw(data, {width: 600, height: 300, title: 'Daily Votes', backgroundColor: '#dcdcdc', legend: 'none' });
+      }
+    </script>
+
+    <div id="chart_div"></div>
+
+
+<% @days.each do |something| %>
+	<%= something %>
+<% end %>
