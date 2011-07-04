@@ -30,6 +30,8 @@ class StatsController < ApplicationController
     result = JSON.parse(open('http://api.chartbeat.com/quickstats?host=poll.cm&apikey=c0c8b1c9686c75ab506a765fef1d1022').read)
     @onlinenow = result['people']
     
+    @title = "Super Secret Awesome Stats"
+    
   end
   
 end

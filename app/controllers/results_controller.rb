@@ -25,6 +25,8 @@ class ResultsController < ApplicationController
       @votesgraph = @votesgraph[1..-1]
     
     end
+    
+    @title = "Make your own polls"
   end
   
 end

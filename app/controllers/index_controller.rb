@@ -2,6 +2,8 @@ class IndexController < ApplicationController
   
   def index
     @question = Question.new
+    
+    @title = "Make your own polls"
   end
   
   def create 
