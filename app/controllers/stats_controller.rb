@@ -1,13 +1,20 @@
 class StatsController < ApplicationController
   
   def index
-    @all = Vote.all
-    
+    @votes = Vote.all
     @days = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     
-    @all.each do |vote|
+    @votes.each do |vote|
       @days[((Time.now.to_i - vote.created_at.to_i)/86400).floor] = @days[((Time.now.to_i - vote.created_at.to_i)/86400).floor] + 1
     end
+    
+    @questions = Question.all
+    @dailyquestions = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    
+    @questions.each do |question|
+      @dailyquestions[((Time.now.to_i - question.created_at.to_i)/86400).floor] = @dailyquestions[((Time.now.to_i - question.created_at.to_i)/86400).floor] + 1
+    end
+    
   end
   
 end

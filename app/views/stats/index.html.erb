@@ -1,79 +1,158 @@
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+  google.load("visualization", "1", {packages:["corechart"]});
+  google.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Day');
+    data.addColumn('number', 'Votes');
+    data.addRows(30);
+    data.setValue(0, 0, '');
+    data.setValue(0, 1, <%= @days[29] %>);
+    data.setValue(1, 0, '');
+    data.setValue(1, 1, <%= @days[28] %>);
+    data.setValue(2, 0, '');
+    data.setValue(2, 1, <%= @days[27] %>);
+    data.setValue(3, 0, '');
+    data.setValue(3, 1, <%= @days[26] %>);
+    data.setValue(4, 0, '');
+    data.setValue(4, 1, <%= @days[25] %>);
+    data.setValue(5, 0, '');
+    data.setValue(5, 1, <%= @days[24] %>);
+    data.setValue(6, 0, '');
+    data.setValue(6, 1, <%= @days[23] %>);
+    data.setValue(7, 0, '');
+    data.setValue(7, 1, <%= @days[22] %>);
+    data.setValue(8, 0, '');
+    data.setValue(8, 1, <%= @days[21] %>);
+    data.setValue(9, 0, '');
+    data.setValue(9, 1, <%= @days[20] %>);
+    data.setValue(10, 0, '');
+    data.setValue(10, 1, <%= @days[19] %>);
+    data.setValue(11, 0, '');
+    data.setValue(11, 1, <%= @days[18] %>);
+    data.setValue(12, 0, '');
+    data.setValue(12, 1, <%= @days[17] %>);
+    data.setValue(13, 0, '');
+    data.setValue(13, 1, <%= @days[16] %>);
+    data.setValue(14, 0, '');
+    data.setValue(14, 1, <%= @days[15] %>);
+    data.setValue(15, 0, '');
+    data.setValue(15, 1, <%= @days[14] %>);
+    data.setValue(16, 0, '');
+    data.setValue(16, 1, <%= @days[13] %>);
+    data.setValue(17, 0, '');
+    data.setValue(17, 1, <%= @days[12] %>);
+    data.setValue(18, 0, '');
+    data.setValue(18, 1, <%= @days[11] %>);
+    data.setValue(19, 0, '');
+    data.setValue(19, 1, <%= @days[10] %>);
+    data.setValue(20, 0, '');
+    data.setValue(20, 1, <%= @days[9] %>);
+    data.setValue(21, 0, '');
+    data.setValue(21, 1, <%= @days[8] %>);
+    data.setValue(22, 0, '');
+    data.setValue(22, 1, <%= @days[7] %>);
+    data.setValue(23, 0, '');
+    data.setValue(23, 1, <%= @days[6] %>);
+    data.setValue(24, 0, '');
+    data.setValue(24, 1, <%= @days[5] %>);
+    data.setValue(25, 0, '');
+    data.setValue(25, 1, <%= @days[4] %>);
+    data.setValue(26, 0, '');
+    data.setValue(26, 1, <%= @days[3] %>);
+    data.setValue(27, 0, '');
+    data.setValue(27, 1, <%= @days[2] %>);
+    data.setValue(28, 0, '');
+    data.setValue(28, 1, <%= @days[1] %>);
+    data.setValue(29, 0, '');
+data.setValue(29, 1, <%= @days[0] %>);
 
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Day');
-        data.addColumn('number', 'Votes');
-        data.addRows(30);
-        data.setValue(0, 0, '');
-        data.setValue(0, 1, <%= @days[29] %>);
-        data.setValue(1, 0, '');
-        data.setValue(1, 1, <%= @days[28] %>);
-        data.setValue(2, 0, '');
-        data.setValue(2, 1, <%= @days[27] %>);
-        data.setValue(3, 0, '');
-        data.setValue(3, 1, <%= @days[26] %>);
-        data.setValue(4, 0, '');
-        data.setValue(4, 1, <%= @days[25] %>);
-        data.setValue(5, 0, '');
-        data.setValue(5, 1, <%= @days[24] %>);
-        data.setValue(6, 0, '');
-        data.setValue(6, 1, <%= @days[23] %>);
-        data.setValue(7, 0, '');
-        data.setValue(7, 1, <%= @days[22] %>);
-        data.setValue(8, 0, '');
-        data.setValue(8, 1, <%= @days[21] %>);
-        data.setValue(9, 0, '');
-        data.setValue(9, 1, <%= @days[20] %>);
-        data.setValue(10, 0, '');
-        data.setValue(10, 1, <%= @days[19] %>);
-        data.setValue(11, 0, '');
-        data.setValue(11, 1, <%= @days[18] %>);
-        data.setValue(12, 0, '');
-        data.setValue(12, 1, <%= @days[17] %>);
-        data.setValue(13, 0, '');
-        data.setValue(13, 1, <%= @days[16] %>);
-        data.setValue(14, 0, '');
-        data.setValue(14, 1, <%= @days[15] %>);
-        data.setValue(15, 0, '');
-        data.setValue(15, 1, <%= @days[14] %>);
-        data.setValue(16, 0, '');
-        data.setValue(16, 1, <%= @days[13] %>);
-        data.setValue(17, 0, '');
-        data.setValue(17, 1, <%= @days[12] %>);
-        data.setValue(18, 0, '');
-        data.setValue(18, 1, <%= @days[11] %>);
-        data.setValue(19, 0, '');
-        data.setValue(19, 1, <%= @days[10] %>);
-        data.setValue(20, 0, '');
-        data.setValue(20, 1, <%= @days[9] %>);
-        data.setValue(21, 0, '');
-        data.setValue(21, 1, <%= @days[8] %>);
-        data.setValue(22, 0, '');
-        data.setValue(22, 1, <%= @days[7] %>);
-        data.setValue(23, 0, '');
-        data.setValue(23, 1, <%= @days[6] %>);
-        data.setValue(24, 0, '');
-        data.setValue(24, 1, <%= @days[5] %>);
-        data.setValue(25, 0, '');
-        data.setValue(25, 1, <%= @days[4] %>);
-        data.setValue(26, 0, '');
-        data.setValue(26, 1, <%= @days[3] %>);
-        data.setValue(27, 0, '');
-        data.setValue(27, 1, <%= @days[2] %>);
-        data.setValue(28, 0, '');
-        data.setValue(28, 1, <%= @days[1] %>);
-        data.setValue(29, 0, '');
-				data.setValue(29, 1, <%= @days[0] %>);
+    var chart = new google.visualization.LineChart(document.getElementById('votes'));
+    chart.draw(data, {width: 600, height: 300, title: 'Daily Votes', backgroundColor: '#dcdcdc', legend: 'none', colors:['#3588ba']});
+  }
 
-        var chart = new google.visualization.LineChart(document.getElementById('votes'));
-        chart.draw(data, {width: 600, height: 300, title: 'Daily Votes', backgroundColor: '#dcdcdc', legend: 'none'});
-      }
-    </script>
+</script>
 
-    <div id="votes"></div>
+<script type="text/javascript">
+  google.load("visualization", "1", {packages:["corechart"]});
+  google.setOnLoadCallback(drawChart);
+	function drawChart() {
+	  var data = new google.visualization.DataTable();
+	  data.addColumn('string', 'Day');
+	  data.addColumn('number', 'Questions');
+	  data.addRows(30);
+	  data.setValue(0, 0, '');
+	  data.setValue(0, 1, <%= @dailyquestions[29] %>);
+	  data.setValue(1, 0, '');
+	  data.setValue(1, 1, <%= @dailyquestions[28] %>);
+	  data.setValue(2, 0, '');
+	  data.setValue(2, 1, <%= @dailyquestions[27] %>);
+	  data.setValue(3, 0, '');
+	  data.setValue(3, 1, <%= @dailyquestions[26] %>);
+	  data.setValue(4, 0, '');
+	  data.setValue(4, 1, <%= @dailyquestions[25] %>);
+	  data.setValue(5, 0, '');
+	  data.setValue(5, 1, <%= @dailyquestions[24] %>);
+	  data.setValue(6, 0, '');
+	  data.setValue(6, 1, <%= @dailyquestions[23] %>);
+	  data.setValue(7, 0, '');
+	  data.setValue(7, 1, <%= @dailyquestions[22] %>);
+	  data.setValue(8, 0, '');
+	  data.setValue(8, 1, <%= @dailyquestions[21] %>);
+	  data.setValue(9, 0, '');
+	  data.setValue(9, 1, <%= @dailyquestions[20] %>);
+	  data.setValue(10, 0, '');
+	  data.setValue(10, 1, <%= @dailyquestions[19] %>);
+	  data.setValue(11, 0, '');
+	  data.setValue(11, 1, <%= @dailyquestions[18] %>);
+	  data.setValue(12, 0, '');
+	  data.setValue(12, 1, <%= @dailyquestions[17] %>);
+	  data.setValue(13, 0, '');
+	  data.setValue(13, 1, <%= @dailyquestions[16] %>);
+	  data.setValue(14, 0, '');
+	  data.setValue(14, 1, <%= @dailyquestions[15] %>);
+	  data.setValue(15, 0, '');
+	  data.setValue(15, 1, <%= @dailyquestions[14] %>);
+	  data.setValue(16, 0, '');
+	  data.setValue(16, 1, <%= @dailyquestions[13] %>);
+	  data.setValue(17, 0, '');
+	  data.setValue(17, 1, <%= @dailyquestions[12] %>);
+	  data.setValue(18, 0, '');
+	  data.setValue(18, 1, <%= @dailyquestions[11] %>);
+	  data.setValue(19, 0, '');
+	  data.setValue(19, 1, <%= @dailyquestions[10] %>);
+	  data.setValue(20, 0, '');
+	  data.setValue(20, 1, <%= @dailyquestions[9] %>);
+	  data.setValue(21, 0, '');
+	  data.setValue(21, 1, <%= @dailyquestions[8] %>);
+	  data.setValue(22, 0, '');
+	  data.setValue(22, 1, <%= @dailyquestions[7] %>);
+	  data.setValue(23, 0, '');
+	  data.setValue(23, 1, <%= @dailyquestions[6] %>);
+	  data.setValue(24, 0, '');
+	  data.setValue(24, 1, <%= @dailyquestions[5] %>);
+	  data.setValue(25, 0, '');
+	  data.setValue(25, 1, <%= @dailyquestions[4] %>);
+	  data.setValue(26, 0, '');
+	  data.setValue(26, 1, <%= @dailyquestions[3] %>);
+	  data.setValue(27, 0, '');
+	  data.setValue(27, 1, <%= @dailyquestions[2] %>);
+	  data.setValue(28, 0, '');
+	  data.setValue(28, 1, <%= @dailyquestions[1] %>);
+	  data.setValue(29, 0, '');
+		data.setValue(29, 1, <%= @dailyquestions[0] %>);
+
+	  var chart = new google.visualization.LineChart(document.getElementById('questions'));
+	  chart.draw(data, {width: 600, height: 300, title: 'Daily Questions', backgroundColor: '#dcdcdc', legend: 'none', colors:['#c6c037']});
+	}
+
+
+</script>
+
+
+
+<div id="votes"></div>
+<div id="questions"></div>
 
 
