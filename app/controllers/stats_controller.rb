@@ -15,6 +15,11 @@ class StatsController < ApplicationController
       @dailyquestions[((Time.now.to_i - question.created_at.to_i)/86400).floor] = @dailyquestions[((Time.now.to_i - question.created_at.to_i)/86400).floor] + 1
     end
     
+    @totalquestions = Question.all.count
+    @totalvotes = Vote.all.count
+    
+    @averagevotes = (@totalvotes.to_f/@totalquestions.to_f)
+    
   end
   
 end

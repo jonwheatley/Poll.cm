@@ -324,13 +324,23 @@ a {
 		}
 		
 #stats {
-	padding-top: 20px;
-	width: 1000px;
+	padding-top: 100px;
+	width: 820px;
 	margin: 0 auto;
 }
 #votes {
 	float: left;
+	padding: 0 5px 0 5px;
 }
 #questions {
 	float: left;
+	padding: 0 5px 0 5px;
+}
+#total {
+	font: normal 19px Helvetica, Arial;
+	padding-bottom: 50px;
+	line-height: 30px;
+}
+#total span {
+	font-weight: 800;
 }
