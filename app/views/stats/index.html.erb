@@ -69,7 +69,7 @@
 data.setValue(29, 1, <%= @days[0] %>);
 
     var chart = new google.visualization.LineChart(document.getElementById('votes'));
-    chart.draw(data, {width: 400, height: 300, title: 'Daily Votes', backgroundColor: '#dcdcdc', legend: 'none', colors:['#3588ba'], chartArea:{left:20,top:20,width:"100%",height:"75%"}});
+    chart.draw(data, {width: 400, height: 300, title: 'Daily Votes', backgroundColor: '#dcdcdc', legend: 'none', colors:['#3588ba'], chartArea:{left:20,top:20,width:"95%",height:"75%"}});
   }
 
 </script>
@@ -144,17 +144,16 @@ data.setValue(29, 1, <%= @days[0] %>);
 		data.setValue(29, 1, <%= @dailyquestions[0] %>);
 
 	  var chart = new google.visualization.LineChart(document.getElementById('questions'));
-	  chart.draw(data, {width: 400, height: 300, title: 'Daily Questions', backgroundColor: '#dcdcdc', legend: 'none', colors:['#c6c037'], chartArea:{left:20,top:20,width:"100%",height:"75%"}});
+	  chart.draw(data, {width: 400, height: 300, title: 'Daily Questions', backgroundColor: '#dcdcdc', legend: 'none', colors:['#c6c037'], chartArea:{left:20,top:20,width:"95%",height:"75%"}});
 	}
 
 
 </script>
 
 
+
 <div id="stats">	
-	<div id="total">
-		To date there have been a total of <span><%= @totalquestions %></span> questions and <span><%= @totalvotes %></span> votes. Each question has an average of <span><%= sprintf("%.02f" ,@averagevotes ) %></span> votes and roughly <span><%= sprintf("%.02f", @averageoptions) %></span> options. Oh, and right now there's <span><%= @onlinenow %></span> users online. 
-	</div>
+	<%= render 'stats' %>
 	<div id="graphs">
 		<div id="votes"></div>
 		<div id="questions"></div>
