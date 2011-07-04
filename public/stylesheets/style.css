@@ -337,10 +337,11 @@ a {
 	padding: 0 5px 0 5px;
 }
 #total {
-	font: normal 19px Helvetica, Arial;
+	font: normal 17px Helvetica, Arial;
 	padding-bottom: 50px;
 	line-height: 30px;
 }
 #total span {
+	font: normal 19px Helvetica, Arial;
 	font-weight: 800;
 }
