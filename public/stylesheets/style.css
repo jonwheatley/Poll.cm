@@ -322,3 +322,15 @@ a {
 			width: 295px;
 			text-align: right;
 		}
+		
+#stats {
+	padding-top: 20px;
+	width: 1000px;
+	margin: 0 auto;
+}
+#votes {
+	float: left;
+}
+#questions {
+	float: left;
+}

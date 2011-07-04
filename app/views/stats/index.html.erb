@@ -69,7 +69,7 @@
 data.setValue(29, 1, <%= @days[0] %>);
 
     var chart = new google.visualization.LineChart(document.getElementById('votes'));
-    chart.draw(data, {width: 600, height: 300, title: 'Daily Votes', backgroundColor: '#dcdcdc', legend: 'none', colors:['#3588ba']});
+    chart.draw(data, {width: 500, height: 300, title: 'Daily Votes', backgroundColor: '#dcdcdc', legend: 'none', colors:['#3588ba']});
   }
 
 </script>
@@ -144,15 +144,16 @@ data.setValue(29, 1, <%= @days[0] %>);
 		data.setValue(29, 1, <%= @dailyquestions[0] %>);
 
 	  var chart = new google.visualization.LineChart(document.getElementById('questions'));
-	  chart.draw(data, {width: 600, height: 300, title: 'Daily Questions', backgroundColor: '#dcdcdc', legend: 'none', colors:['#c6c037']});
+	  chart.draw(data, {width: 500, height: 300, title: 'Daily Questions', backgroundColor: '#dcdcdc', legend: 'none', colors:['#c6c037']});
 	}
 
 
 </script>
 
 
-
-<div id="votes"></div>
-<div id="questions"></div>
+<div id="stats">	
+	<div id="votes"></div>
+	<div id="questions"></div>
+</div>
 
 
