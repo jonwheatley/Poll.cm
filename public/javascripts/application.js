@@ -16,14 +16,14 @@ function refreshpage () {
   setTimeout(refreshpage, 10000);
 }
 
-$(function() {
-  if ($("#stats").length > 0) {
-    setTimeout(refreshpage, 10000);
-  }
-});
-
-function refreshpage () {
-  var question_id = $("#stats")
-  $.getScript("/stats.js")
-  setTimeout(refreshpage, 10000);
-}
+// $(function() {
+//   if ($("#stats").length > 0) {
+//     setTimeout(refreshpage, 10000);
+//   }
+// });
+// 
+// // function refreshpage () {
+// //   var question_id = $("#stats")
+// //   $.getScript("/stats.js")
+// //   setTimeout(refreshpage, 10000);
+// // }
