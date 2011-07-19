@@ -26,7 +26,7 @@ class ResultsController < ApplicationController
     
     end
     
-    @title = Question.find(params[:id]).question
+    @title = Question.find(params[:id]).question + "?"
   end
   
 end
