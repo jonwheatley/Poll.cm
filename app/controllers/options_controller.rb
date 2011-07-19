@@ -12,7 +12,7 @@ class OptionsController < ApplicationController
     @options = Option.where(:question_id => params[:id])
     @votes = Vote.new
     
-    @title = "Make your own polls"
+    @title = @question.question + "?" # add custom title
   end
   
 end
