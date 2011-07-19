@@ -26,7 +26,7 @@ class ResultsController < ApplicationController
     
     end
     
-    @title = "Make your own polls"
+    @title = Question.find(params[:id]).question
   end
   
 end
