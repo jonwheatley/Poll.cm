@@ -345,3 +345,17 @@ a {
 	font: normal 19px Helvetica, Arial;
 	font-weight: 800;
 }
+
+#latestquestions {
+	display: block;
+	width: 820px;
+}
+
+#latestquestions li {
+	line-height: 40px;
+}
+
+#latestquestions small {
+	font-size: 9px;
+	color: #666666;
+}

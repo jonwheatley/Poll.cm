@@ -158,7 +158,17 @@ data.setValue(29, 1, <%= @days[0] %>);
 		<div id="votes"></div>
 		<div id="questions"></div>
 	</div>
+	
+	<div id="latestquestions">
+		<h1>Latest questions</h1>
+		<% @latestquestions.each do |q| %>
+		<ul>
+			<li><a href="http://poll.cm/<%= q.id %>"><%= q.question %>?</a> <small><%= q.votes.count %> votes</small></li>
+		</ul>
+		<% end %>
+	</div>
 </div>
+
 
 
 <script>

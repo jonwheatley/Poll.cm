@@ -32,6 +32,10 @@ class StatsController < ApplicationController
     
     @title = "Super Secret Awesome Stats"
     
+    # latest questions
+    
+    @latestquestions = Question.find(:all, :order => 'created_at DESC', :limit => 7)
+    
   end
   
 end
