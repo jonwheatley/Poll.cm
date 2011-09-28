@@ -11,7 +11,7 @@ class ResultsController < ApplicationController
       redirect_to options_path(@question)
     else
     
-      @av = 100/@total
+      @av = 100/@total.to_f
     
       @optionsgraph = ""
       @votesgraph = ""
