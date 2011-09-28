@@ -12,7 +12,7 @@
 	<% @question.options.each do |option| %>
 	<li><p><%= option.option %></p><p class="stats">
 	
-	<%= option.votes.count %> votes | <%= @av*option.votes.count %>%
+	<%= option.votes.count %> votes | <%= @av*option.votes.count.to_i %>%
 	</p><p class="bar"><em style="width: <%= @av*option.votes.count %>%"></em></p></li>
 	<% end %>
 	
