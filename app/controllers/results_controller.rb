@@ -12,6 +12,7 @@ class ResultsController < ApplicationController
     else
     
       @av = 100/@total.to_f
+      @av = @av.to_i
     
       @optionsgraph = ""
       @votesgraph = ""
