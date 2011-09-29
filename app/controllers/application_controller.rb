@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_filter :footer
   
   def footer
-    @totalquestions = Question.all.count+6206
-    @totalvotes = Vote.all.count+54742
+    @totalquestions = Question.all.count
+    @totalvotes = Vote.all.count
   end
 end
